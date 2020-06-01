@@ -2,16 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://www.dropzonejs.com/">Dropzonejs</a>.</p>
 </div>
 
 
-<section>
-    <div id="dropzone">
-        <form action="/file-upload"
-              class="dropzone"
-              id="my-awesome-dropzone"></form>
-    </div>
-</section>
+<p>
+    <form class="dropzone" id="drop"></form>
+</p>
+<p>
+    <button class="upload-or-else"> Upload </button>
+</p>
+
+@section Scripts
+{
+    @* DropZone *@
+    <script src="~/dropzone-5.7.0/dist/dropzone.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+
+}
