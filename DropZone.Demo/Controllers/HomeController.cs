@@ -16,7 +16,6 @@ namespace DropZone.Demo.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private string fileName = "";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -36,14 +35,7 @@ namespace DropZone.Demo.Controllers
         [HttpPost]
         public async Task<HttpResponseMessage> UploadChunk(DropZoneDto model)
         {
-            if (fileName == model.FileName)
-            {
 
-            }
-            else
-            {
-                fileName = model.FileName;
-            }
             var response = new HttpResponseMessage { StatusCode = HttpStatusCode.Created };
             try
             {
